@@ -3,8 +3,8 @@ import { Bookmark } from './../models/bookmark.model'
 import * as BookmarkActions from './../actions/bookmark.actions'
 
 const initialState: Bookmark = {
-    name: 'Initial Bookmark',
-    url: 'http://google.com',
+    name: 'Localhost project link Bookmark',
+    url: 'http://localhost:4200/',
     group: 0
 }
 

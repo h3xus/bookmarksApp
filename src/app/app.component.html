@@ -1,2 +1,13 @@
-<app-bookmark-add></app-bookmark-add>
-<app-bookmark-list></app-bookmark-list>
+<mat-toolbar color="primary">My bookmarks</mat-toolbar>
+
+<section>
+    <mat-card>
+        <app-bookmark-add></app-bookmark-add>
+        <app-bookmark-list></app-bookmark-list>
+    </mat-card>
+</section>
+<div class="ActionPoint">
+    <button mat-fab aria-label="Example icon-button with a heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+</div>

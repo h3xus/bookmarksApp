@@ -1,9 +1,22 @@
 <p>bookmark-add</p>
-<div class="left">
+<!-- <button mat-raised-button color="accent">Accent</button> -->
 
-  <input type="text" placeholder="name" #name>
-  <input type="text" placeholder="url" #url>
-  <input type="number" placeholder="group" #group>
+<div class="form-container">
+  <mat-form-field>
+    <input matInput type="text" placeholder="name" #name>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <input matInput type="text" placeholder="url" #url>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-select placeholder="Select" #group>
+      <mat-option *ngFor="let group of groups" [value]="group.value">
+        {{group.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 
-  <button (click)="addBookmark(name.value,url.value,group.value)">Add a bookmark</button>
+  <button mat-button (click)="addBookmark(name.value,url.value,group.value)">Add a bookmark</button>
 </div>
