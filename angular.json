@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "bookmarksApp"
+  "defaultProject": "bookmarksApp",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

@@ -1,1 +1,14 @@
-<p>bookmark-list works!</p>
+<h3>Bookmarks</h3>
+<!-- <div class="right" *ngIf="bookmarks"> -->
+<div class="right">
+
+  <ul>
+    <li *ngFor="let bookmark of bookmarks | async; let i = index">
+      <a [href]="bookmark.url" target="_blank">
+        <span>{{ bookmark.name }} - {{ bookmark.group }}</span>
+      </a>
+        <span (click)="removeBookmarks(i)">X</span>
+    </li>
+  </ul>
+
+</div>
