@@ -1,22 +1,29 @@
-<p>bookmark-add</p>
-<!-- <button mat-raised-button color="accent">Accent</button> -->
+<mat-card class="form-card">
+  <h3>New bookmark</h3>
+  <mat-card-content>
+    <mat-form-field class="input-full-width">
+      <input matInput type="text" placeholder="name" #name>
+      <mat-icon matSuffix>mode_edit</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="input-full-width">
+      <input matInput type="text" placeholder="url" #url>
+      <mat-icon matSuffix>mode_edit</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="input-full-width">
+      <mat-select placeholder="Select" #group>
+        <mat-option *ngFor="let group of groups" [value]="group.value">
+          {{group.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (keyup.enter)="addBookmark(name.value,url.value,group.value)"
+      (click)="addBookmark(name.value,url.value,group.value)">Add a
+      bookmark</button>
+    <button mat-raised-button color="accent" (click)="clearInputs(name.value,url.value,group.value)">Clear</button>
+  </mat-card-actions>
+</mat-card>
 
 <div class="form-container">
-  <mat-form-field>
-    <input matInput type="text" placeholder="name" #name>
-  </mat-form-field>
-  
-  <mat-form-field>
-    <input matInput type="text" placeholder="url" #url>
-  </mat-form-field>
-  
-  <mat-form-field>
-    <mat-select placeholder="Select" #group>
-      <mat-option *ngFor="let group of groups" [value]="group.value">
-        {{group.viewValue}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <button mat-button (click)="addBookmark(name.value,url.value,group.value)">Add a bookmark</button>
 </div>
