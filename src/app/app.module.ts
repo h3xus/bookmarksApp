@@ -17,8 +17,10 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { AddComponent } from './components/add/add.component';
 
 // sub components
-import { BookmarkListComponent } from './bookmark-list/bookmark-list.component';
-import { BookmarkAddComponent } from './bookmark-add/bookmark-add.component';
+import { BookmarkListComponent } from './components/bookmark-list/bookmark-list.component';
+import { BookmarkAddComponent } from './components/bookmark-add/bookmark-add.component';
+import { BookmarkEditComponent } from './components/bookmark-edit/bookmark-edit.component';
+import { BookmarkFilterComponent } from './components/bookmark-filter/bookmark-filter.component';
 
 //material components
 import { MatInputModule } from '@angular/material/input';
@@ -31,12 +33,16 @@ import { MatListModule } from '@angular/material/list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookmarkListComponent,
     BookmarkAddComponent,
+    BookmarkEditComponent,
+    BookmarkFilterComponent,
     HomeComponent,
     EditComponent,
     PageNotFoundComponent,
@@ -58,7 +64,9 @@ import { MatMenuModule } from '@angular/material/menu';
     MatListModule,
     MatSnackBarModule,
     MatBottomSheetModule,
-    MatMenuModule
+    MatMenuModule,
+    MatButtonToggleModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

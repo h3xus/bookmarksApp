@@ -2,11 +2,11 @@
   <h3>New bookmark</h3>
   <mat-card-content>
     <mat-form-field class="input-full-width">
-      <input matInput type="text" placeholder="name" #name>
+      <input matInput type="text" placeholder="name" required #name>
       <mat-icon matSuffix>mode_edit</mat-icon>
     </mat-form-field>
     <mat-form-field class="input-full-width">
-      <input matInput type="text" placeholder="url" #url>
+      <input matInput type="text" placeholder="url" required #url>
       <mat-icon matSuffix>mode_edit</mat-icon>
     </mat-form-field>
     <mat-form-field class="input-full-width">
@@ -19,8 +19,7 @@
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="primary" (keyup.enter)="addBookmark(name.value,url.value,group.value)"
-      (click)="addBookmark(name.value,url.value,group.value)">Add a
-      bookmark</button>
+      (click)="addBookmark(name.value,url.value,group.value)">Add a bookmark</button>
     <button mat-raised-button color="accent" (click)="clearInputs(name.value,url.value,group.value)">Clear</button>
   </mat-card-actions>
 </mat-card>

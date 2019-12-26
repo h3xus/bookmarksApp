@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { Bookmark } from './../models/bookmark.model';
-import { AppState } from './../app.state';
-import * as BookmarkActions from './../actions/bookmark.actions';
+import { Bookmark } from '../../models/bookmark.model';
+import { AppState } from '../../app.state';
+import * as BookmarkActions from '../../actions/bookmark.actions';
 
 @Component({
   selector: 'app-bookmark-list',
@@ -12,8 +12,8 @@ import * as BookmarkActions from './../actions/bookmark.actions';
 })
 export class BookmarkListComponent implements OnInit {
 
-  bookmarks: Observable<Bookmark[]>;
-
+  bookmarks: Observable<Bookmark[]>
+  
   constructor(private store: Store<AppState>) {
     this.bookmarks = store.select('bookmark')
   }

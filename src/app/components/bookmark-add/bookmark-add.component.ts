@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Store } from '@ngrx/store';
-import { AppState } from './../app.state';
-import { Bookmark } from './../models/bookmark.model'
-import * as BookmarkActions from './../actions/bookmark.actions';
+import { AppState } from '../../app.state';
+import { Bookmark } from '../../models/bookmark.model'
+import * as BookmarkActions from '../../actions/bookmark.actions';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router} from '@angular/router'
 
@@ -20,9 +20,11 @@ export interface Groups {
 
 export class BookmarkAddComponent implements OnInit {
   // constructor() { }
+  isChecked = true;
+
   constructor(private store: Store<AppState>, 
               private _snackBar: MatSnackBar,
-              private router: Router) { }
+              private router: Router) {}
 
   addBookmark(name: string, url: string, group: number) {
     if (name.length>0 && url.length>0) {
@@ -30,9 +32,7 @@ export class BookmarkAddComponent implements OnInit {
       this.openSnackBar('Success new '+name +' bookmark was added')
       setTimeout(() => {
         this.router.navigateByUrl('/home')
-      }, 500);
-      
-      
+      }, 500)
     } else {
       this.openSnackBar('Please fill the form')
     }
@@ -54,11 +54,12 @@ export class BookmarkAddComponent implements OnInit {
 
   // work / leisure/ personal 
   groups: Groups[] = [
-    { value: 0, viewValue: 'Work' },
+    { value: 0, viewValue: 'General' },
     { value: 1, viewValue: 'Leisure' },
     { value: 2, viewValue: 'Personal' },
     { value: 3, viewValue: 'Secret' },
-    { value: 4, viewValue: 'NSFW' }
+    { value: 4, viewValue: 'NSFW' },
+    { value: 5, viewValue: 'Work' }
   ];
 
   ngOnInit() {

@@ -1,0 +1,14 @@
+<h3>Bookmarks</h3>
+<!-- <div class="list" *ngIf="typeOflist"> -->
+<div class="edit">
+  <mat-selection-list #shoes>
+    <mat-list-option *ngFor="let bookmark of bookmarks | async; let i = index">
+      {{bookmark.name}}
+    </mat-list-option>
+  </mat-selection-list>
+
+  <p>
+    Options selected: {{shoes.selectedOptions.selected.length}}
+    <button *ngIf="shoes.selectedOptions.selected.length>0" mat-stroked-button color="warn">Delete</button>
+  </p>
+</div>

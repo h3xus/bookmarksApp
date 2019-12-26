@@ -1,5 +1,5 @@
 <h3>Bookmarks</h3>
-<div class="right">
+<div class="list">
   <mat-nav-list>
     <mat-list-item *ngFor="let bookmark of bookmarks | async; let i = index">
       <a [href]="bookmark.url" target="_blank">
