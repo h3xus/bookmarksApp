@@ -3,6 +3,8 @@
 
 ## Getting copy fro this repo
 
+git clone repo://
+
 npm i
 
 ng serve --open
