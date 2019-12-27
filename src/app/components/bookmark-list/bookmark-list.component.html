@@ -3,12 +3,13 @@
   <mat-nav-list>
     <mat-list-item *ngFor="let bookmark of bookmarks | async; let i = index" class="item">
       <a [href]="bookmark.url" target="_blank">
+        <span>{{ showCat(bookmark.group) }}</span> - 
         <span class="item-name">{{ bookmark.name }}</span> - 
         <span class="item-url">{{bookmark.url}}</span>
       </a>
-      <span>{{ bookmark.group }}</span>
-      <button class="item-delete-btn" mat-flat-button (click)="removeBookmark(i)">Basic</button>
-      <!-- <span (click)="removeBookmarks(i)">X</span> -->
+      <button class="item-delete-btn" mat-mini-fab (click)="removeBookmark(i)">
+        <mat-icon>delete</mat-icon>
+      </button>
       <mat-divider></mat-divider>
     </mat-list-item>
   </mat-nav-list>

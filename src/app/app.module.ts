@@ -24,6 +24,7 @@ import { BookmarkFilterComponent } from './components/bookmark-filter/bookmark-f
 
 // all material modules
 import { MaterialModule } from './material.module';
+import { SelectingComponent } from './components/selecting/selecting.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MaterialModule } from './material.module';
     HomeComponent,
     EditComponent,
     PageNotFoundComponent,
-    AddComponent
+    AddComponent,
+    SelectingComponent
   ],
   imports: [
     BrowserModule,

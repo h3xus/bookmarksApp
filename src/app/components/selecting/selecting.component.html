@@ -1,0 +1,5 @@
+<mat-select placeholder="Select">
+  <mat-option *ngFor="let group of groups" [value]="group.value">
+    {{group.viewValue}}
+  </mat-option>
+</mat-select>

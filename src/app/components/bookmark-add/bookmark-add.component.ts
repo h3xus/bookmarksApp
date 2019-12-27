@@ -7,10 +7,13 @@ import * as BookmarkActions from '../../actions/bookmark.actions';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router} from '@angular/router'
 
-export interface Groups {
-  value: number
-  viewValue: string
-}
+import { Groups } from './../../groups'
+import { GROUPS } from './../../mock-groups'
+
+// export interface Groups {
+//   value: number
+//   viewValue: string
+// }
 
 @Component({
   selector: 'app-bookmark-add',
@@ -19,8 +22,8 @@ export interface Groups {
 })
 
 export class BookmarkAddComponent implements OnInit {
-  // constructor() { }
-  isChecked = true;
+
+  groups = GROUPS
 
   constructor(private store: Store<AppState>, 
               private _snackBar: MatSnackBar,
@@ -31,6 +34,7 @@ export class BookmarkAddComponent implements OnInit {
       this.store.dispatch(new BookmarkActions.AddBookmark({ name: name, url: url, group: group }))
       this.openSnackBar('Success new '+name +' bookmark was added')
       setTimeout(() => {
+        name = ''
         this.router.navigateByUrl('/home')
       }, 500)
     } else {
@@ -52,14 +56,14 @@ export class BookmarkAddComponent implements OnInit {
   }
 
   // work / leisure/ personal 
-  groups: Groups[] = [
-    { value: 0, viewValue: 'General' },
-    { value: 1, viewValue: 'Leisure' },
-    { value: 2, viewValue: 'Personal' },
-    { value: 3, viewValue: 'Secret' },
-    { value: 4, viewValue: 'NSFW' },
-    { value: 5, viewValue: 'Work' }
-  ];
+  // groups: Groups[] = [
+  //   { value: 0, viewValue: 'General' },
+  //   { value: 1, viewValue: 'Leisure' },
+  //   { value: 2, viewValue: 'Personal' },
+  //   { value: 3, viewValue: 'Secret' },
+  //   { value: 4, viewValue: 'NSFW' },
+  //   { value: 5, viewValue: 'Work' }
+  // ];
 
   ngOnInit() {
   }
