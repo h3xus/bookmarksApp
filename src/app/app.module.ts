@@ -12,7 +12,6 @@ import { reducer } from './reducers/bookmark.reducer';
 
 // main page components
 import { HomeComponent } from './components/home/home.component';
-import { EditComponent } from './components/edit/edit.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AddComponent } from './components/add/add.component';
 
@@ -34,7 +33,6 @@ import { SelectingComponent } from './components/selecting/selecting.component';
     BookmarkEditComponent,
     BookmarkFilterComponent,
     HomeComponent,
-    EditComponent,
     PageNotFoundComponent,
     AddComponent,
     SelectingComponent

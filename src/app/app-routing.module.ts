@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { AddComponent } from './components/add/add.component';
-import { EditComponent } from './components/edit/edit.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 import { BookmarkListComponent } from './components/bookmark-list/bookmark-list.component';
@@ -27,16 +26,15 @@ const routes: Routes = [
         component: BookmarkListComponent
       },
       {
-        path: 'filter',
-        component: BookmarkFilterComponent
-      },
-      {
         path: 'edit',
         component: BookmarkEditComponent
+      },
+      {
+        path: 'filter',
+        component: BookmarkFilterComponent
       }
     ] },
   { path: 'add', component: AddComponent },
-  { path: 'edit', component: EditComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

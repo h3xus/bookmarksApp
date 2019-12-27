@@ -19,6 +19,11 @@ export class SelectingComponent implements OnInit {
 
   groups = GROUPS
 
+  doWork(val: any) {
+  console.log("TCL: SelectingComponent -> doWork -> val", val)
+
+  }
+
   ngOnInit() {
   }
 

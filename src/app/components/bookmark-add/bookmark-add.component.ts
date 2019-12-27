@@ -27,7 +27,7 @@ export class BookmarkAddComponent implements OnInit {
   addBookmark(name: string, url: string, group: number) {
     if (name.length>0 && url.length>0) {
       this.store.dispatch(new BookmarkActions.AddBookmark({ name: name, url: url, group: group }))
-      this.openSnackBar('Success new '+name +' bookmark was added')
+      this.openSnackBar(`Success new "${name}" bookmark was added`)
       setTimeout(() => {
         // this
         console.log("TCL: BookmarkAddComponent -> addBookmark -> this", this)

@@ -1,5 +1,5 @@
 <mat-card>
-  <mat-select placeholder="Select a categor" [(value)]="selected">
+  <mat-select placeholder="Select a categor" (selectionChange)="doWork($event.value)" [(value)]="selected">
     <mat-option class="sel-cat-def" value=""> All </mat-option>
     <mat-option class="sel-cat" *ngFor="let group of groups" [value]="group.value">
       {{group.viewValue}}
