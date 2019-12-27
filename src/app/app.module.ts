@@ -22,6 +22,7 @@ import { BookmarkAddComponent } from './components/bookmark-add/bookmark-add.com
 import { BookmarkEditComponent } from './components/bookmark-edit/bookmark-edit.component';
 import { BookmarkFilterComponent } from './components/bookmark-filter/bookmark-filter.component';
 
+// all material modules
 import { MaterialModule } from './material.module';
 
 @NgModule({

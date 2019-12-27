@@ -18,7 +18,7 @@
   <router-outlet></router-outlet>
 </section>
 <div class="ActionPoint">
-    <button mat-fab aria-label="Add new bookmark" alt="Add new bookmark" routerLink="/add">
+    <button mat-fab aria-label="Add new bookmark" alt="Add new bookmark" (click)="openDialog()">
       <mat-icon>favorite</mat-icon>
     </button>
 </div>

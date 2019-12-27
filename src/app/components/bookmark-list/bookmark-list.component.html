@@ -1,12 +1,15 @@
 <h3>Bookmarks</h3>
 <div class="list">
   <mat-nav-list>
-    <mat-list-item *ngFor="let bookmark of bookmarks | async; let i = index">
+    <mat-list-item *ngFor="let bookmark of bookmarks | async; let i = index" class="item">
       <a [href]="bookmark.url" target="_blank">
-        <span>{{ bookmark.name }} - {{ bookmark.group }}</span>
+        <span class="item-name">{{ bookmark.name }}</span> - 
+        <span class="item-url">{{bookmark.url}}</span>
       </a>
+      <span>{{ bookmark.group }}</span>
+      <button class="item-delete-btn" mat-flat-button (click)="removeBookmark(i)">Basic</button>
+      <!-- <span (click)="removeBookmarks(i)">X</span> -->
       <mat-divider></mat-divider>
     </mat-list-item>
   </mat-nav-list>
-        <!-- <span (click)="removeBookmarks(i)">X</span> -->
 </div>

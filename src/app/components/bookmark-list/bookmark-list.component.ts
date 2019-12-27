@@ -22,6 +22,10 @@ export class BookmarkListComponent implements OnInit {
     this.store.dispatch(new BookmarkActions.RemoveBookmark(index))
   }
 
+  showCat(val:number) {
+
+  }
+
   ngOnInit() {
   }
 

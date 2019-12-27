@@ -49,7 +49,6 @@ export class BookmarkAddComponent implements OnInit {
     console.log("TCL: BookmarkAddComponent -> clearInputs -> val", val)
     console.log("TCL: BookmarkAddComponent -> clearInputs -> val2", val2)
     console.log("TCL: BookmarkAddComponent -> clearInputs ->  val3",  val3)
-
   }
 
   // work / leisure/ personal 

@@ -1,15 +1,14 @@
 <mat-card>
-  <div>
-    <button mat-stroked-button [routerLinkActive]="'is-active'" routerLink="/home/filter" class="sub-menu">
-      <span>Filter bookmarks</span>
+  <div class="sub-menu-container">
+    <button mat-stroked-button [routerLinkActive]="'is-active'" routerLink="/home/list" class="sub-menu">
+      <span>List bookmarks</span>
     </button>
     <button mat-stroked-button [routerLinkActive]="'is-active'" routerLink="/home/edit" class="sub-menu">
       <span>Edit bookmarks</span>
     </button>
-    <button mat-stroked-button [routerLinkActive]="'is-active'" routerLink="/home/list" class="sub-menu">
-      <span>List bookmarks</span>
+    <button mat-stroked-button [routerLinkActive]="'is-active'" routerLink="/home/filter" class="sub-menu">
+      <span>Filter bookmarks</span>
     </button>
   </div>
   <router-outlet></router-outlet>
-  <!-- <app-bookmark-list></app-bookmark-list> -->
 </mat-card>

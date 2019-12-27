@@ -1,6 +1,5 @@
 # BookmarksApp
 
-
 ## Getting copy fro this repo
 
 git clone repo://
