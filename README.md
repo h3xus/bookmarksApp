@@ -2,7 +2,12 @@
 
 ## Getting copy fro this repo
 
-git clone repo://
+Project requiers node.js preferable (v.10~)
+
+
+git clone https://github.com/h3xus/bookmarksApp.git
+
+cd bookmarksApp
 
 npm i
 

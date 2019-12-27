@@ -1,5 +1,8 @@
-<mat-select placeholder="Select">
-  <mat-option *ngFor="let group of groups" [value]="group.value">
-    {{group.viewValue}}
-  </mat-option>
-</mat-select>
+<mat-card>
+  <mat-select placeholder="Select a categor" [(value)]="selected">
+    <mat-option class="sel-cat-def" value=""> All </mat-option>
+    <mat-option class="sel-cat" *ngFor="let group of groups" [value]="group.value">
+      {{group.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-card>

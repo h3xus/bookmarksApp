@@ -1,0 +1,17 @@
+.item {
+  .item {
+    &-name {
+      font-style: bold;
+    }
+
+    &-url {
+      font-style: italic;
+    }
+
+    &-delete-btn {
+      position: absolute;
+      right: 1em;
+      background: red;
+    }
+  }
+}

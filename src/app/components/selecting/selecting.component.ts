@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { Groups } from './../../groups'
 import { GROUPS } from './../../mock-groups'
 
@@ -9,7 +8,12 @@ import { GROUPS } from './../../mock-groups'
   templateUrl: './selecting.component.html',
   styleUrls: ['./selecting.component.scss']
 })
+
 export class SelectingComponent implements OnInit {
+  @Input() name: string;
+  @Output() chosen = new EventEmitter<boolean>();
+  selected = ''
+
 
   constructor() { }
 

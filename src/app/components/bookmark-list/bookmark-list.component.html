@@ -1,4 +1,6 @@
 <h3>Bookmarks</h3>
+<app-selecting [name]="selecte" (chosen)="showCatSel($event)"></app-selecting>
+<mat-divider></mat-divider>
 <div class="list">
   <mat-nav-list>
     <mat-list-item *ngFor="let bookmark of bookmarks | async; let i = index" class="item">
@@ -7,9 +9,6 @@
         <span class="item-name">{{ bookmark.name }}</span> - 
         <span class="item-url">{{bookmark.url}}</span>
       </a>
-      <button class="item-delete-btn" mat-mini-fab (click)="removeBookmark(i)">
-        <mat-icon>delete</mat-icon>
-      </button>
       <mat-divider></mat-divider>
     </mat-list-item>
   </mat-nav-list>

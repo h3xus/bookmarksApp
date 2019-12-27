@@ -10,11 +10,6 @@ import { Router} from '@angular/router'
 import { Groups } from './../../groups'
 import { GROUPS } from './../../mock-groups'
 
-// export interface Groups {
-//   value: number
-//   viewValue: string
-// }
-
 @Component({
   selector: 'app-bookmark-add',
   templateUrl: './bookmark-add.component.html',
@@ -34,8 +29,8 @@ export class BookmarkAddComponent implements OnInit {
       this.store.dispatch(new BookmarkActions.AddBookmark({ name: name, url: url, group: group }))
       this.openSnackBar('Success new '+name +' bookmark was added')
       setTimeout(() => {
-        name = ''
-        this.router.navigateByUrl('/home')
+        // this
+        console.log("TCL: BookmarkAddComponent -> addBookmark -> this", this)
       }, 500)
     } else {
       this.openSnackBar('Please fill the form')
@@ -46,24 +41,7 @@ export class BookmarkAddComponent implements OnInit {
     this._snackBar.open(name,'', {
       duration: 2000,
     });
-
   }
-
-  clearInputs(val:string,val2:string, val3:string) {
-    console.log("TCL: BookmarkAddComponent -> clearInputs -> val", val)
-    console.log("TCL: BookmarkAddComponent -> clearInputs -> val2", val2)
-    console.log("TCL: BookmarkAddComponent -> clearInputs ->  val3",  val3)
-  }
-
-  // work / leisure/ personal 
-  // groups: Groups[] = [
-  //   { value: 0, viewValue: 'General' },
-  //   { value: 1, viewValue: 'Leisure' },
-  //   { value: 2, viewValue: 'Personal' },
-  //   { value: 3, viewValue: 'Secret' },
-  //   { value: 4, viewValue: 'NSFW' },
-  //   { value: 5, viewValue: 'Work' }
-  // ];
 
   ngOnInit() {
   }

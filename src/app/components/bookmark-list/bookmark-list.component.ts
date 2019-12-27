@@ -23,12 +23,12 @@ export class BookmarkListComponent implements OnInit {
     this.bookmarks = store.select('bookmark')
   }
 
-  removeBookmark(index:number) {
-    this.store.dispatch(new BookmarkActions.RemoveBookmark(index))
-  }
-
   showCat(val:number) {
     return GROUPS[val].viewValue
+  }
+
+  showCatSel(val:number){
+    console.log("TCL: BookmarkListComponent -> showCatSel -> val", val)
   }
 
   ngOnInit() {
