@@ -1,5 +1,7 @@
 # BookmarksApp
 
+![AppScreens](https://raw.githubusercontent.com/h3xus/bookmarksApp/master/img/bookmarkAppGif.gif?token=ABCFPRSRAVN2XTG3RUOENWS6BHCRG)
+
 ## Getting copy fro this repo
 
 Project requiers node.js preferable (v.10~)
